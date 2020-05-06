@@ -1,0 +1,61 @@
+// colors
+$gradient: linear-gradient(
+  270deg,
+  rgb(150, 201, 61),
+  rgb(0, 176, 155)
+); // green gradient
+$red: rgb(219, 76, 63);
+$green: rgb(130, 189, 112);
+$backdrop: rgba(229, 229, 229, 0.75);
+$white: rgb(255, 255, 255);
+$grey: rgb(158, 158, 158);
+
+// mixins
+@mixin icon {
+  font-size: 25px;
+  color: $white;
+  cursor: pointer;
+}
+
+@mixin text {
+  text-align: center;
+  font-size: 13px;
+}
+
+@mixin btn {
+  cursor: pointer;
+  @include text;
+  text-transform: none;
+  letter-spacing: 0;
+  color: $white;
+  background: $gradient;
+}
+
+@mixin link {
+  color: $green;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 24px 16px -15px rgba(0, 0, 0, 0.1),
+    0 2px 26px rgba(0, 0, 0, 0.16);
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin separator {
+  margin: 30px 0;
+  height: 0;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $white;
+  position: relative;
+}
